@@ -151,5 +151,11 @@ function getFinalTextMap(str, aPos) {
     arr.push(oKeyword);
     index = item.pos + item.len;
   });
+  const sFragmentEnd = str.substring(index);
+  const oFragmentEnd = {
+    type: 0,
+    text: sFragmentEnd,
+  };
+  arr.push(oFragmentEnd);
   return arr;
 }
