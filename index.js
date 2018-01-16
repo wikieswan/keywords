@@ -28,6 +28,9 @@ function fSplitKeywordsFromStringText(str, aKeyword) {
 function getKeywordPosInStr(str, label) {
   const aIndexs = [];
   let pos = str.indexOf(label);
+  if (pos === -1) {
+    return aIndexs;
+  }
   aIndexs.push({
     keyword: label,
     len: label.length,
